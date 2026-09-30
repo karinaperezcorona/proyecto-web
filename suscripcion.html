@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - TechAcademy</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="CSS/miEstiloS.css">
+    <!-- Tipografía en línea (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div id="logo">
+            <h1>TechAcademy</h1>
+            
+        </div>
+        <nav class="navPrincipal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+                <li><a href="mentoria.html">Mentoría</a></li>
+                <li><a href="suscripcion.html" id="btn_destacado">Inscribirse</a></li>
+                 <img src="imagenes/Logo UTL.jpg" alt="FronEnd" style="width: 5;" height="50">
+            </ul>
+        </nav>
+    </header> 
+
+    <!-- CONTENIDO PRINCIPAL --> 
+    <main class="contenedorPrincipal">
+        
+        <section class="seccion_formulario">
+            <div class="encabezado_form">
+                <h2>Formulario de Inscripción</h2>
+                <p>Completa los siguientes campos para formalizar tu registro en el curso seleccionado.</p>
+            </div>
+
+            <!-- Formulario de inscripción con método GET -->
+            <form action="suscripcion.html" method="GET" class="form_inscripcion">
+                
+                <!-- Nombre completo -->
+                <div class="grupo_campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Karina Pérez" required>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="grupo_campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <!-- Teléfono de contacto -->
+                <div class="grupo_campo">
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 4771234567" required>
+                </div>
+
+                <!-- Selección de curso -->
+                <div class="grupo_campo">
+                    <label for="curso">Selecciona un curso:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="" disabled selected>-- Elige un curso --</option>
+                        <option value="frontend">Desarrollo Web FrontEnd</option>
+                        <option value="python">Python para Ciencia de Datos</option>
+                        <option value="bases_datos">Base de datos Robustas</option>
+                        <option value="backend">Programación Backend con APIs</option>
+                    </select>
+                </div>
+
+                <!-- Modalidad -->
+                <div class="grupo_campo">
+                    <label for="modalidad">Modalidad de estudio:</label>
+                    <select id="modalidad" name="modalidad" required>
+                        <option value="">Selecciona la modalidad </option>
+                        <option value="online">En línea (Asincrónico)</option>
+                        <option value="remoto">En vivo (Remoto)</option>
+                        <option value="presencial">Presencial</option>
+                    </select>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit" id="btn_accion">Confirmar Inscripción</button>
+            </form>
+        </section>
+    </main>
+
+          <footer>
+        <p>&copy; 2026 TechAcademy</p>
+    </footer>
+    
+</body>
+</html>
